@@ -4,7 +4,7 @@
 
 ## Description
 
-A lengthy and worthy description
+A lengthy and worthy project description
 
 ## Table of Contents
 
@@ -17,27 +17,35 @@ A lengthy and worthy description
 
 ## Installation
 
-first do this, then you'll do this
+first install this, then install that
 
 ## Usage
 
-don't get wet, handle with care
+don't get wet - handle with care
 
 ## Contributing
 
-reach out to original devs - be nice
+please reach out to the original devs - be kind
 
 ## Tests
 
-first test this , then test that
+first test this, then test that
 
 ## Questions
 
 alexngeis
-alex@gmail.com
+alex@mail.com
 
 ---
 
 ## License
 
 MIT license
+
+## Deploment/Review Details
+
+[READme Generator - Video Walkthrough](https://drive.google.com/file/d/1OepECp294ohOp8qB7u51aLrawRBkTLH3/view)
+
+[Github Repo - READme Generator](https://github.com/alexgeis/READme-generator)
+
+![READme Generator - screenshot](./assets/readme-generator-screenshot.png)
