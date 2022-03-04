@@ -56,58 +56,55 @@ const questions = [
 //BADGE - shields.io - make badge via URL
 //https://img.shields.io/badge/license-LICENSETYPE-blue
 
-// TODO: Create a function to write README file
-// function writeToFile(README.md, data) {}
-
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then((response) => {
+    // TODO: Create a function to write README file
     function createReadme(response) {
       return `# ${response.title}
+![License Badge](https://img.shields.io/badge/license-${response.license}-blue)
 
-      ![License Badge](https://img.shields.io/badge/license-${response.license}-blue)
+## Description
       
-      ## Description
-      
-      ${response.description}
+${response.description}
 
-      ## Table of Contents
+## Table of Contents
       
-      - [Installation](#installation)
-      - [Usage](#usage)
-      - [Contributing](#example)
-      - [Tests](#example)
-      - [Questions](#example)
-      - [License](#license)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#example)
+- [Tests](#example)
+- [Questions](#example)
+- [License](#license)
       
-      ## Installation
+## Installation
       
-      ${response.installInstructions}
+${response.installInstructions}
 
-      ## Usage
+## Usage
 
-      ${response.usageInfo}
+${response.usageInfo}
       
-      ## Contributing
+## Contributing
 
-      ${response.contribGuides}
+${response.contribGuides}
       
-      ## Tests
+## Tests
 
-      ${response.testInstructions}
+${response.testInstructions}
       
-      ## Questions
+## Questions
 
-      ${response.gitName}
-      ${response.email}
+${response.gitName}
+${response.email}
       
-      ---
+---
       
-      ## License
+## License
 
-      ${response.license} license
+${response.license} license
       
-      `;
+`;
     }
     fs.writeFile("README.md", createReadme(response), (err) =>
       err
