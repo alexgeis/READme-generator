@@ -72,9 +72,9 @@ ${response.description}
       
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#example)
-- [Tests](#example)
-- [Questions](#example)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 - [License](#license)
       
 ## Installation
