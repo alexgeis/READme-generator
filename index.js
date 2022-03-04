@@ -35,11 +35,26 @@ const questions = [
     message: "Test instructions:",
     name: "testInstructions",
   },
+  {
+    type: "list",
+    message: "License type:",
+    name: "license",
+    choices: ["MIT", "GNU GPLv3", "GNU AGPLv3", "The Unlicense", "none"],
+  },
+  {
+    type: "input",
+    message: "Developer Github username:",
+    name: "gitName",
+  },
+  {
+    type: "input",
+    message: "Developer email:",
+    name: "email",
+  },
 ];
 
-//dot MD file markup - needed for table of contents
-
 //BADGE - shields.io - make badge via URL
+//https://img.shields.io/badge/license-LICENSETYPE-blue
 
 // TODO: Create a function to write README file
 // function writeToFile(README.md, data) {}
@@ -48,7 +63,51 @@ const questions = [
 function init() {
   inquirer.prompt(questions).then((response) => {
     function createReadme(response) {
-      return ``;
+      return `# ${response.title}
+
+      ![License Badge](https://img.shields.io/badge/license-${response.license}-blue)
+      
+      ## Description
+      
+      ${response.description}
+
+      ## Table of Contents
+      
+      - [Installation](#installation)
+      - [Usage](#usage)
+      - [Contributing](#example)
+      - [Tests](#example)
+      - [Questions](#example)
+      - [License](#license)
+      
+      ## Installation
+      
+      ${response.installInstructions}
+
+      ## Usage
+
+      ${response.usageInfo}
+      
+      ## Contributing
+
+      ${response.contribGuides}
+      
+      ## Tests
+
+      ${response.testInstructions}
+      
+      ## Questions
+
+      ${response.gitName}
+      ${response.email}
+      
+      ---
+      
+      ## License
+
+      ${response.license} license
+      
+      `;
     }
     fs.writeFile("README.md", createReadme(response), (err) =>
       err
