@@ -1,3 +1,5 @@
+Below is an example of the readme generator output:
+
 # Example Title
 
 ![License Badge](https://img.shields.io/badge/license-MIT-blue)
